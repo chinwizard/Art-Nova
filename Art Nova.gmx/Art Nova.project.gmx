@@ -32,6 +32,9 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Booze Bottles">
       <object>objects\ob_gin</object>

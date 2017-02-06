@@ -1,0 +1,10 @@
+>Added mouse wiggles to bottle objects
+>Added Wiggle + pour code for Lemon, Sugar, Soda and Flower
+>Added Tom Collins + Martini to recipe check
+>>Tried and failed to add debug victory/fail text for Tom/Martini, used variables instead. (tom, tom_goof, Martini, Martini_goof)
+
+Tom Collins
+45ml Gin
+60ml Soda
+30ml Lemon
+15ml Sugar
