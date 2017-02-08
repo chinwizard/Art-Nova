@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// Add alcohol to shaker
 x = x-6
-global.gin = global.gin + (global.jiggervol)
+global.whiterum = global.whiterum + (global.jiggervol)
 </string>
           </argument>
         </arguments>

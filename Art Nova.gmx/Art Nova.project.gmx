@@ -32,6 +32,9 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\cocktail_check.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
@@ -57,6 +60,7 @@
     <object>objects\ob_shaker</object>
     <object>objects\ob_jigger</object>
     <object>objects\ob_setup</object>
+    <object>objects\txt_debug</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestBar</room>

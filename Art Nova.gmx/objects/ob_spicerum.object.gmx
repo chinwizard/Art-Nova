@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Add alcohol to shaker
+            <string>/// Add alcohol to shaker
 x = x-6
-global.gin = global.gin + (global.jiggervol)
+global.spicedrum = global.spicedrum + (global.jiggervol)
 </string>
           </argument>
         </arguments>

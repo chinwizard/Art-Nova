@@ -29,6 +29,7 @@
 
 /// Misc
 global.jiggervol = 30;
+global.currentcocktail = "none";
 /// Booze
 global.gin = 0;
 global.vodka = 0;

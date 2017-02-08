@@ -25,10 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tom = 0
-tom_goof = 0
+            <string>///Define Cocktail Check Variables
+//Gin
+tomcollins = 0
 martini = 0
-martini_goof = 0
+negroni = 0
+//Vodka
+fruity = 0
+moscow = 0
+espresso = 0
+screwdriver = 0
+//Tequila
+juan = 0
+sunrise = 0
+margarita = 0
+//White Rum
+daiquiri = 0
+mojito = 0
+pina = 0
+//Whiskey
+julip = 0
+irishcoffee = 0
+lynch = 0
+//Rum
+cuba = 0
+gingerpunch = 0
+maitai = 0
+//Specials
+longisland = 0
+teapunch = 0
 </string>
           </argument>
         </arguments>
@@ -115,19 +140,13 @@ if(
     {
     if (global.gin == 45 &amp;&amp; global.soda == 60 &amp;&amp; global.lemon == 30 &amp;&amp; global.sugar == 15)
         {
-        /// Display victory or fail text and call the alarm to reset global variables
-        tom = 1
+        global.currentcocktail = "tom collins"
         }
     else
         {
-        tom_goof = 1
+        global.currentcocktail = "bad tom collins"
         }
     }
-else
-    {
-    draw_text((room_width/2),(room_height/2),'error')
-    }
-    
 //Martini Check
 if(
  global.gin &gt;0 &amp;&amp; //*$*
@@ -148,26 +167,349 @@ if(
     {
     if (global.gin == 90 &amp;&amp; global.flower == 15)
         {
-        /// Display victory text and call the alarm to reset global variables
-        draw_text(self.x,self.y,'Ya made a Martini!')
-        martini = 1
+        global.currentcocktail = "martini"
         }
     else
         {
-        martini_goof = 1
+        global.currentcocktail = "bad martini"
         }
     }
-else
-    {
-    draw_text((room_width/2),(room_height/2),'error')
-    }
+//Negroni Check **NEEDS BITTERS
 
+//Fruit Tingle Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka &gt;0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon &gt;0 &amp;&amp;
+ global.lime == 0 &amp;&amp;
+ global.citrus &gt;0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower &gt;0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.vodka == 30 &amp;&amp; global.citrus == 30 &amp;&amp; global.lemon == 30 &amp;&amp; global.sugar == 30)
+        {
+        global.currentcocktail = "fruity"
+        }
+    else
+        {
+        global.currentcocktail = "bad fruity"
+        }
+    }
+///Moscow Mule Check **NEEDS GINGER
+
+//Espresso Martini Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka &gt;0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon == 0 &amp;&amp;
+ global.lime == 0 &amp;&amp;
+ global.citrus == 0 &amp;&amp;
+ global.coffee &gt;0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.vodka == 45 &amp;&amp; global.coffee == 45 &amp;&amp; global.sugar == 15)
+        {
+        global.currentcocktail = "espresso martini"
+        }
+    else
+        {
+        global.currentcocktail = "bad espresso martini"
+        }
+    }
+//Screwdriver Check **NEEDS JUICE
+
+//Juan Collins Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila &gt;0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon &gt;0 &amp;&amp;
+ global.lime == 0 &amp;&amp;
+ global.citrus == 0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.tequila == 30 &amp;&amp; global.lemon == 30 &amp;&amp; global.sugar == 15)
+        {
+        global.currentcocktail = "juan collins"
+        }
+    else
+        {
+        global.currentcocktail = "bad juan collins"
+        }
+    }
+//Sunrise Check **NEEDS JUICE
+
+//Margarita Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila &gt;0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar == 0 &amp;&amp;
+ global.lemon == 0 &amp;&amp;
+ global.lime &gt;0 &amp;&amp;
+ global.citrus &gt;0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.tequila == 45 &amp;&amp; global.lime == 30 &amp;&amp; global.citrus == 30)
+        {
+        global.currentcocktail = "margarita"
+        }
+    else
+        {
+        global.currentcocktail = "bad margarita"
+        }
+    }
+//Daiquiri Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum &gt;0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon == 0 &amp;&amp;
+ global.lime &gt;0 &amp;&amp;
+ global.citrus == 0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.whiterum == 30 &amp;&amp; global.lime == 30 &amp;&amp; global.sugar == 15)
+        {
+        global.currentcocktail = "daiquiri"
+        }
+    else
+        {
+        global.currentcocktail = "bad daiquiri"
+        }
+    }
+//Mojito Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum &gt;0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon ==0 &amp;&amp;
+ global.lime &gt;0 &amp;&amp;
+ global.citrus == 0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint &gt;0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.whiterum == 45 &amp;&amp; global.lime == 30 &amp;&amp; global.sugar == 15 &amp;&amp; global.mint ==15)
+        {
+        global.currentcocktail = "mojito"
+        }
+    else
+        {
+        global.currentcocktail = "bad mojito"
+        }
+    }
+//Pina Colada **NEEDS CREAM
+
+//Mint Julip Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey &gt;0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar &gt;0 &amp;&amp;
+ global.lemon ==0 &amp;&amp;
+ global.lime == 0 &amp;&amp;
+ global.citrus == 0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint &gt;0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.whiskey == 60 &amp;&amp; global.mint == 15 &amp;&amp; global.sugar == 15)
+        {
+        global.currentcocktail = "mint julip"
+        }
+    else
+        {
+        global.currentcocktail = "bad mint julip"
+        }
+    }
+//Irish Coffee **NEEDS CREAM
+
+//Lynchburg Lemonade check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey &gt;0 &amp;&amp;
+ global.spicedrum == 0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar == 0 &amp;&amp;
+ global.lemon &gt;0 &amp;&amp;
+ global.lime == 0 &amp;&amp;
+ global.citrus &gt;0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda &gt;0
+ )
+    {
+    if (global.tequila == 45 &amp;&amp; global.lemon == 60 &amp;&amp; global.sugar == 30 &amp;&amp; global.soda == 15 )
+        {
+        global.currentcocktail = "lynch lemonade"
+        }
+    else
+        {
+        global.currentcocktail = "bad lynch lemonade"
+        }
+    }
+//Cuba Libre **NEEDS COLA
+
+//Ginger Punch **NEEDS GINGER
+
+//Mai Tai Check
+if(
+ global.gin == 0 &amp;&amp; 
+ global.vodka == 0 &amp;&amp;
+ global.tequila == 0 &amp;&amp;
+ global.whiskey == 0 &amp;&amp;
+ global.spicedrum &gt;0 &amp;&amp;
+ global.whiterum == 0 &amp;&amp;
+ global.sugar == 0 &amp;&amp;
+ global.lemon == 0 &amp;&amp;
+ global.lime &gt;0 &amp;&amp;
+ global.citrus &gt;0 &amp;&amp;
+ global.coffee == 0 &amp;&amp;
+ global.flower == 0 &amp;&amp; 
+ global.mint == 0 &amp;&amp;
+ global.soda == 0
+ )
+    {
+    if (global.spicedrum == 45 &amp;&amp; global.lime == 15 &amp;&amp; global.citrus == 15)
+        {
+        global.currentcocktail = "mai tai"
+        }
+    else
+        {
+        global.currentcocktail = "bad mai tai"
+        }
+    }
+//Call debug_text to show cocktail results, call alarm to reset global alcohol
+instance_create(self.x, self.y, txt_debug)
+alarm[0] = room_speed
 </string>
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>831</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_partemit_create</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>834</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_partemit_stream</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>6</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -187,18 +529,82 @@ else
             <string>///Check for cocktail Success/Fail, then draw debug text
 draw_self();
 //Tom Collins
-if (tom = 1)
+if (tomcollins = 1)
     {
     draw_text(self.x, self.y, "Tom Collins baby!")
     alarm[0] = 1
     }
-if (tom_goof = 1)
+if (tomcollins = 2)
     {
     draw_text(self.x, self.y, "That's a shitty Tom Collins mang...")
     alarm[0] = 1
     }
-    
-
+//Martini
+if (martini = 1)
+    {
+    draw_text(self.x, self.y, "Martini baby!")
+    alarm[0] = 1
+    }
+if (martini = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Martini mang...")
+    alarm[0] = 1
+    }
+//Negroni
+if (negroni = 1)
+    {
+    draw_text(self.x, self.y, "Negroni baby!")
+    alarm[0] = 1
+    }
+if (negroni = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Negroni mang...")
+    alarm[0] = 1
+    }
+//Fruity Tingle
+if (fruity = 1)
+    {
+    draw_text(self.x, self.y, "Fruity Tingle baby!")
+    alarm[0] = 1
+    }
+if (fruity = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Fruity Tingle mang...")
+    alarm[0] = 1
+    }
+//Moscow
+if (moscow = 1)
+    {
+    draw_text(self.x, self.y, "Moscow baby!")
+    alarm[0] = 1
+    }
+if (martini = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Moscow mang...")
+    alarm[0] = 1
+    }
+//Espresso Martini
+if (espresso = 1)
+    {
+    draw_text(self.x, self.y, "Espresso baby!")
+    alarm[0] = 1
+    }
+if (espresso = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Espresso mang...")
+    alarm[0] = 1
+    }
+//Screwdriver
+if (screwdriver = 1)
+    {
+    draw_text(self.x, self.y, "Martini baby!")
+    alarm[0] = 1
+    }
+if (martini = 2)
+    {
+    draw_text(self.x, self.y, "That's a shitty Martini mang...")
+    alarm[0] = 1
+    }
 </string>
           </argument>
         </arguments>
