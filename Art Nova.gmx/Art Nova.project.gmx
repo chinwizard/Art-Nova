@@ -27,16 +27,19 @@
     </sprites>
     <sprite>sprites\spr_jigger</sprite>
     <sprite>sprites\spr_shaker</sprite>
+    <sprite>sprites\spr_peanut</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_popup</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\cocktail_check.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\font0</font>
+    <font>fonts\fnt_1</font>
   </fonts>
   <objects name="objects">
     <objects name="Booze Bottles">
@@ -61,8 +64,11 @@
     <object>objects\ob_jigger</object>
     <object>objects\ob_setup</object>
     <object>objects\txt_debug</object>
+    <object>objects\ob_dialogue_test</object>
+    <object>objects\ob_leftchara</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Dialogue</room>
     <room>rooms\TestBar</room>
   </rooms>
   <help>

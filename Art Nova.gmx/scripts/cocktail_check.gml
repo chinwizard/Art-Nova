@@ -1,3 +1,4 @@
+//Debug script for checking what cocktail is made and displaying the text
 if (global.currentcocktail = argument0)
     {
     draw_text(self.x, self.y, +string(argument0) + " baby!")
